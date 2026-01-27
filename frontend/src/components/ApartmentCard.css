@@ -1,0 +1,104 @@
+.apartment-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.apartment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.25rem;
+}
+
+.card-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #666;
+}
+
+.detail-row .value {
+  color: #333;
+  text-align: right;
+}
+
+.detail-row .value-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.detail-row .value-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.card-footer {
+  padding: 1rem 1.25rem;
+  background: #f9f9f9;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.link-button {
+  flex: 1;
+  min-width: 140px;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.booli-link {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.booli-link:hover {
+  background: #d0d0d0;
+}
+
+.realtor-link {
+  background: #4CAF50;
+  color: white;
+}
+
+.realtor-link:hover {
+  background: #45a049;
+}
+
+.link-button.disabled {
+  background: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+}

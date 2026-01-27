@@ -1,0 +1,735 @@
+{
+  "props": {
+    "pageProps": {
+      "__APOLLO_STATE__": {
+        "HousingCoop:79143": {
+          "__typename": "HousingCoop",
+          "id": "79143"
+        },
+        "Area_V3:1": {
+          "__typename": "Area_V3",
+          "id": "1",
+          "name": "Stockholm",
+          "parent": "2",
+          "type": "municipality"
+        },
+        "Area_V3:2": {
+          "__typename": "Area_V3",
+          "id": "2",
+          "name": "Stockholms län",
+          "parent": "77104",
+          "type": "county"
+        },
+        "Area_V3:143": {
+          "__typename": "Area_V3",
+          "id": "143",
+          "name": "Stockholms innerstad",
+          "parent": "1",
+          "type": "userDefined"
+        },
+        "Area_V3:77104": {
+          "__typename": "Area_V3",
+          "id": "77104",
+          "name": "Sverige",
+          "parent": "undefined",
+          "type": "country"
+        },
+        "Area_V3:101683": {
+          "__typename": "Area_V3",
+          "id": "101683",
+          "name": "Gästrikegatan",
+          "parent": "1",
+          "type": "streetName"
+        },
+        "Area_V3:115349": {
+          "__typename": "Area_V3",
+          "id": "115349",
+          "name": "Vasastan",
+          "parent": "1",
+          "type": "suburb"
+        },
+        "Area_V3:115363": {
+          "__typename": "Area_V3",
+          "id": "115363",
+          "name": "Vasastan/Norrmalm",
+          "parent": "1",
+          "type": "locality"
+        },
+        "Area_V3:860640": {
+          "__typename": "Area_V3",
+          "id": "860640",
+          "name": "11362",
+          "parent": "851502",
+          "type": "postcode"
+        },
+        "Area_V3:874663": {
+          "__typename": "Area_V3",
+          "id": "874663",
+          "name": "Sabbatsberg/Atlas",
+          "parent": "1",
+          "type": "locality"
+        },
+        "Area_V3:883816": {
+          "__typename": "Area_V3",
+          "id": "883816",
+          "name": "Innanför tullarna",
+          "parent": "1",
+          "type": "locality"
+        },
+        "Area_V3:898763": {
+          "__typename": "Area_V3",
+          "id": "898763",
+          "name": "Sankt Eriksplan",
+          "parent": "1",
+          "type": "userDefined"
+        },
+        "Area_V3:973576": {
+          "__typename": "Area_V3",
+          "id": "973576",
+          "name": "Storstockholm",
+          "parent": "77104",
+          "type": "indexArea"
+        },
+        "Area_V3:1002244": {
+          "__typename": "Area_V3",
+          "id": "1002244",
+          "name": "SE3",
+          "parent": "77104",
+          "type": "electricityBiddingZone"
+        },
+        "SoldProperty:5848556": {
+          "__typename": "SoldProperty",
+          "id": "5848556",
+          "booliId": "5848556",
+          "addressId": "4450752",
+          "adTargetingProperties": [
+            {
+              "__typename": "KeyValueOutput",
+              "key": "municipality",
+              "value": "1"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "county",
+              "value": "2"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "suburb",
+              "value": "115349"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "district",
+              "value": "115349,115363,874663,883816"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "room",
+              "value": "2"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "priceGroup",
+              "value": "8"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "constructionYearEra",
+              "value": "1"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "objectType",
+              "value": "4"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "plotAreaGroup",
+              "value": "1"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "status",
+              "value": "2"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "address",
+              "value": "Gästrikegatan 22"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "livingAreaGroup",
+              "value": "2"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "zipCode",
+              "value": "860640"
+            },
+            {
+              "__typename": "KeyValueOutput",
+              "key": "upcomingSale",
+              "value": "0"
+            }
+          ],
+          "buildingFloors": null,
+          "residenceId": null,
+          "breadcrumbs": [
+            {
+              "__typename": "BreadcrumbItem",
+              "label": "Stockholms län",
+              "url": "/sok/slutpriser?areaIds=2&objectType=Lägenhet"
+            },
+            {
+              "__typename": "BreadcrumbItem",
+              "label": "Stockholms kommun",
+              "url": "/sok/slutpriser?areaIds=1&objectType=Lägenhet"
+            },
+            {
+              "__typename": "BreadcrumbItem",
+              "label": "Vasastan",
+              "url": "/sok/slutpriser?areaIds=115349&objectType=Lägenhet"
+            },
+            {
+              "__typename": "BreadcrumbItem",
+              "label": "Gästrikegatan",
+              "url": "/sok/slutpriser?areaIds=101683&objectType=Lägenhet"
+            },
+            {
+              "__typename": "BreadcrumbItem",
+              "label": "Bf Vasen u p a",
+              "url": "/bostadsrattsforening/79143"
+            }
+          ],
+          "relatedSearchUrl": "/sok/slutpriser?areaIds=115349&objectType=Lägenhet",
+          "breadcrumbsJsonLd": "{\"@context\":\"http://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Stockholms län\",\"item\":\"https://www.booli.se/sok/slutpriser?areaIds=2&objectType=Lägenhet\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Stockholms kommun\",\"item\":\"https://www.booli.se/sok/slutpriser?areaIds=1&objectType=Lägenhet\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Vasastan\",\"item\":\"https://www.booli.se/sok/slutpriser?areaIds=115349&objectType=Lägenhet\"},{\"@type\":\"ListItem\",\"position\":4,\"name\":\"Gästrikegatan\",\"item\":\"https://www.booli.se/sok/slutpriser?areaIds=101683&objectType=Lägenhet\"},{\"@type\":\"ListItem\",\"position\":5,\"name\":\"Bf Vasen u p a\",\"item\":\"https://www.booli.se/bostadsrattsforening/79143\"}]}",
+          "propertyType": "sold",
+          "objectType": "Lägenhet",
+          "streetAddress": "Gästrikegatan 22",
+          "descriptiveAreaName": "Vasastan Odenplan Sankt Eriksplan",
+          "latitude": 59.34215495,
+          "longitude": 18.0391547,
+          "constructionYear": 1899,
+          "housingCoop": {
+            "__ref": "HousingCoop:79143"
+          },
+          "rooms": {
+            "__typename": "FormattedValue",
+            "formatted": "2 rum",
+            "value": "2",
+            "raw": 2,
+            "unit": "rum"
+          },
+          "livingArea": {
+            "__typename": "FormattedValue",
+            "formatted": "63 m²",
+            "value": "63",
+            "raw": 63,
+            "unit": "m²"
+          },
+          "additionalArea": null,
+          "plotArea": null,
+          "rent": {
+            "__typename": "FormattedValue",
+            "raw": 1587,
+            "value": "1 587",
+            "unit": "kr/mån"
+          },
+          "operatingCost": {
+            "__typename": "FormattedValue",
+            "raw": 600,
+            "value": "600",
+            "unit": "kr/mån"
+          },
+          "primaryArea": {
+            "__typename": "Area_V3",
+            "name": "Vasastan",
+            "preposition": "i"
+          },
+          "areas": [
+            {
+              "__ref": "Area_V3:1"
+            },
+            {
+              "__ref": "Area_V3:2"
+            },
+            {
+              "__ref": "Area_V3:143"
+            },
+            {
+              "__ref": "Area_V3:77104"
+            },
+            {
+              "__ref": "Area_V3:101683"
+            },
+            {
+              "__ref": "Area_V3:115349"
+            },
+            {
+              "__ref": "Area_V3:115363"
+            },
+            {
+              "__ref": "Area_V3:860640"
+            },
+            {
+              "__ref": "Area_V3:874663"
+            },
+            {
+              "__ref": "Area_V3:883816"
+            },
+            {
+              "__ref": "Area_V3:898763"
+            },
+            {
+              "__ref": "Area_V3:973576"
+            },
+            {
+              "__ref": "Area_V3:1002244"
+            }
+          ],
+          "location": {
+            "__typename": "Location",
+            "namedAreas": [
+              "Vasastan Odenplan Sankt Eriksplan"
+            ],
+            "region": {
+              "__typename": "Region",
+              "municipalityName": "Stockholm"
+            }
+          },
+          "salesOfResidence": [
+            {
+              "__ref": "SoldProperty:5848556"
+            }
+          ],
+          "url": "/annons/5848556",
+          "tenureForm": null,
+          "infoSections": [
+            {
+              "__typename": "InfoSection",
+              "key": "soldInfo",
+              "title": "Om försäljningen",
+              "type": "standalone",
+              "lazyLoad": false,
+              "tracking": null,
+              "content": {
+                "__typename": "InfoSectionContent",
+                "infoPoints": [
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "soldPrice",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Slutpriset blev **8 100 000** kr"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "Trophy",
+                        "svg": "https://bcdn.se/assets/shared/icons/Trophy.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "price",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Utropspriset var **7 650 000** kr"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "HouseForSale",
+                        "svg": "https://bcdn.se/assets/shared/icons/HouseForSale.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "priceDiff",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Prisutvecklingen blev **+450 000** kr (+5,9%)"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "Percentage",
+                        "svg": "https://bcdn.se/assets/shared/icons/Percentage.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "soldOrRemovedDate",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Såld eller borttagen **2025-10-16**"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "Gavel",
+                        "svg": "https://bcdn.se/assets/shared/icons/Gavel.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "soldSqmPrice",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Slutpriset per kvadratmeter var **128 600** kr/m²"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "AreaChart",
+                        "svg": "https://bcdn.se/assets/shared/icons/AreaChart.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "soldInfoReadMore",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "[Om slutpris](https://www.booli.se/sv/articles/10545580-vad-ar-skillnaden-mellan-slutpris-lagfart-och-sista-bud)"
+                    },
+                    "logos": [],
+                    "icons": [],
+                    "sponsored": false,
+                    "url": "https://www.booli.se/sv/articles/10545580-vad-ar-skillnaden-mellan-slutpris-lagfart-och-sista-bud",
+                    "action": "openExternalUrl",
+                    "tracking": {
+                      "__typename": "TrackingEvent",
+                      "eventName": "link_clicked",
+                      "properties": {
+                        "type": "internal",
+                        "destination": "support",
+                        "href": "https://www.booli.se/sv/articles/10545580-vad-ar-skillnaden-mellan-slutpris-lagfart-och-sista-bud"
+                      }
+                    },
+                    "tooltip": null
+                  }
+                ],
+                "ctas": []
+              }
+            },
+            {
+              "__typename": "InfoSection",
+              "key": "propertyInfo",
+              "title": "Bostaden",
+              "type": "tab",
+              "lazyLoad": false,
+              "tracking": {
+                "__typename": "TrackingEvent",
+                "eventName": "component_clicked",
+                "properties": {
+                  "component": "tab",
+                  "name": "property_info",
+                  "section": "info_section"
+                }
+              },
+              "content": {
+                "__typename": "InfoSectionContent",
+                "infoPoints": [
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "soldDate",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Uppgifter från försäljningen **2025-10-16**:"
+                    },
+                    "logos": [],
+                    "icons": [],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "rent",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Den har **1 587** kr/mån i avgift"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "CreditCard",
+                        "svg": "https://bcdn.se/assets/shared/icons/CreditCard.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "operatingCost",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Driftskostnaden är **600** kr/mån"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "SizeSelect",
+                        "svg": "https://bcdn.se/assets/shared/icons/SizeSelect.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "floor",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Den ligger på **våning 1**"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "ElevatorOutlined",
+                        "svg": "https://bcdn.se/assets/shared/icons/ElevatorOutlined.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "apartmentNumber",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Lägenhetsnumret är **1103**"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "Hashtag",
+                        "svg": "https://bcdn.se/assets/shared/icons/Hashtag.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  },
+                  {
+                    "__typename": "InfoPoint",
+                    "key": "daysActive",
+                    "displayText": {
+                      "__typename": "DisplayText",
+                      "markdown": "Bostaden var till salu i **12** dagar"
+                    },
+                    "logos": [],
+                    "icons": [
+                      {
+                        "__typename": "CrossPlatformIcon",
+                        "key": "Calendar",
+                        "svg": "https://bcdn.se/assets/shared/icons/Calendar.svg"
+                      }
+                    ],
+                    "sponsored": false,
+                    "url": null,
+                    "action": null,
+                    "tracking": null,
+                    "tooltip": null
+                  }
+                ],
+                "ctas": []
+              }
+            },
+            {
+              "__typename": "InfoSection",
+              "key": "housingCoopInfo",
+              "title": "Föreningen",
+              "type": "tab",
+              "lazyLoad": true,
+              "tracking": {
+                "__typename": "TrackingEvent",
+                "eventName": "component_clicked",
+                "properties": {
+                  "component": "tab",
+                  "name": "housing_coop_info",
+                  "section": "info_section"
+                }
+              },
+              "content": {
+                "__typename": "InfoSectionContent",
+                "infoPoints": [],
+                "ctas": []
+              }
+            }
+          ],
+          "amenities": [
+            {
+              "__ref": "Amenity:{\"key\":\"elevator\"}"
+            },
+            {
+              "__ref": "Amenity:{\"key\":\"balcony\"}"
+            }
+          ],
+          "agentId": "11223",
+          "agencyId": "16",
+          "soldPrice": {
+            "__typename": "FormattedValue",
+            "formatted": "8 100 000 kr",
+            "value": "8 100 000",
+            "raw": 8100000,
+            "unit": "kr"
+          },
+          "soldSqmPrice": {
+            "__typename": "FormattedValue",
+            "value": "128 600",
+            "unit": "kr/m²"
+          },
+          "soldPriceAbsoluteDiff": {
+            "__typename": "FormattedValue",
+            "formatted": "+450 000 kr",
+            "value": "+450 000",
+            "unit": "kr"
+          },
+          "soldPricePercentageDiff": {
+            "__typename": "FormattedValue",
+            "formatted": "+5,9%"
+          },
+          "listPrice": {
+            "__typename": "FormattedValue",
+            "value": "7 650 000",
+            "unit": "kr",
+            "raw": 7650000,
+            "formatted": "7 650 000 kr"
+          },
+          "firstPrice": {
+            "__typename": "FormattedValue",
+            "value": "7 650 000",
+            "unit": "kr",
+            "raw": 7650000,
+            "formatted": "7 650 000 kr"
+          },
+          "soldPriceType": "Slutpris",
+          "removed": "2025-10-16 19:20:09",
+          "images": [],
+          "soldAsUpcomingSale": false
+        },
+        "Amenity:{\"key\":\"elevator\"}": {
+          "__typename": "Amenity",
+          "key": "elevator",
+          "label": "Hiss",
+          "icons": [
+            {
+              "__typename": "CrossPlatformIcon",
+              "svg": "https://bcdn.se/assets/shared/icons/ElevatorOutlined.svg"
+            }
+          ]
+        },
+        "Amenity:{\"key\":\"balcony\"}": {
+          "__typename": "Amenity",
+          "key": "balcony",
+          "label": "Balkong",
+          "icons": [
+            {
+              "__typename": "CrossPlatformIcon",
+              "svg": "https://bcdn.se/assets/shared/icons/BalconyOutlined.svg"
+            }
+          ]
+        },
+        "ROOT_QUERY": {
+          "__typename": "Query",
+          "propertyByListingId({\"listingId\":5848556})": {
+            "__ref": "SoldProperty:5848556"
+          }
+        }
+      }
+    },
+    "__N_SSP": true
+  },
+  "page": "/bostad/[id]",
+  "query": {
+    "id": "5848556"
+  },
+  "buildId": "ZkR8Hg784T7G7v1NGR8cH",
+  "runtimeConfig": {
+    "NEXT_PUBLIC_CI_COMMIT_SHORT_SHA": "893ee4d6",
+    "NEXT_PUBLIC_ONETRUST_ID": "bbb00050-95e8-4d28-87fe-4fa44b032eef",
+    "NEXT_PUBLIC_DIDOMI_ID": "5d4ed0fd-b86a-4b8d-951f-28f453c3ebf6",
+    "NEXT_PUBLIC_DIDOMI_NOTICE_ID": "iThCqLAN",
+    "NEXT_PUBLIC_BOOLI_LOGGER_URL": "https://booli-logger.prod.booli.se/log",
+    "NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN": "pk.eyJ1IjoiZW1pbGthaXNlciIsImEiOiJja3g3ZTFkbnowNWltMm9xY28yYnhxb3BiIn0.VPn9kyFb2FzzxoPfgq8vnQ",
+    "NEXT_PUBLIC_VECTOR_TILE_URL": "https://vector.basemaps.booli.io/europe.json",
+    "NEXT_PUBLIC_GROWTHBOOK_ENDPOINT": "https://cf.bcdn.se/gb/api/features/prod_daZ0s8Lhx51XeSdw9htJm1zhDHduQjmPibbEZBEs",
+    "NEXT_PUBLIC_PIWIK_ID": "0381858c-0fb6-4382-9c37-e5d1c772617d",
+    "NEXT_PUBLIC_ROLLBAR_CLIENT_TOKEN": "8e21a2088bdb4179a0028cd19dd88fba",
+    "NEXT_PUBLIC_AD_FORM_DMP_PID": "66",
+    "NEXT_PUBLIC_GOOGLE_STREET_VIEW_KEY": "AIzaSyB43rJxvmXQReDX9l8HFmQnb4jOaCLTq1I",
+    "NEXT_PUBLIC_GOOGLE_MAPS_KEY": "AIzaSyDOTePL_dVkmjr8oG8RxLw0qyaocKm_GS4",
+    "NEXT_PUBLIC_RECAPTCHA_SITE_KEY": "6LfnUUYoAAAAABOqkOBKTtbTQNVBSJYdKS0ZbL2f",
+    "NEXT_PUBLIC_ALERT_URL": "https://bcdn.se/assets/alert/alert.json",
+    "NEXT_PUBLIC_GROWTHBOOK_HOST": "https://cf.bcdn.se/gb",
+    "NEXT_PUBLIC_GROWTHBOOK_KEY": "sdk-hM0sNig6kLfBSAz",
+    "NEXT_PUBLIC_INTERCOM_APP_ID": "gqrvrudk",
+    "NEXT_PUBLIC_BOOLI_CMS_MEDIA_BASE_URL": "https://booli-cms.bh.booli.se",
+    "NEXT_PUBLIC_BOOLI_CMS_BASE_URL": "https://booli-cms.bh.booli.se"
+  },
+  "isFallback": false,
+  "isExperimentalCompile": false,
+  "gssp": true,
+  "locale": "sv",
+  "locales": [
+    "sv"
+  ],
+  "defaultLocale": "sv",
+  "scriptLoader": []
+}

@@ -1,0 +1,82 @@
+{
+  "agents": {
+    "13752": {
+      "url": "https://www.hittamaklare.se/maklare/13752",
+      "example_address": "Drejargatan 7"
+    },
+    "11542": {
+      "url": "https://www.hittamaklare.se/maklare/11542",
+      "example_address": "Observatoriegatan 7"
+    },
+    "11223": {
+      "url": "https://www.hittamaklare.se/maklare/11223",
+      "example_address": "Gästrikegatan 22"
+    },
+    "13581": {
+      "url": "https://www.hittamaklare.se/maklare/13581",
+      "example_address": "Tulegatan 32A"
+    },
+    "9453": {
+      "url": "https://www.hittamaklare.se/maklare/9453",
+      "example_address": "Atlasgatan 9"
+    },
+    "6955": {
+      "url": "https://www.hittamaklare.se/maklare/6955",
+      "example_address": "Tulegatan 21"
+    },
+    "9226": {
+      "url": "https://www.hittamaklare.se/maklare/9226",
+      "example_address": "Sankt Eriksgatan 85A"
+    },
+    "13997": {
+      "url": "https://www.hittamaklare.se/maklare/13997",
+      "example_address": "Karlbergsvägen 47B"
+    },
+    "11986": {
+      "url": "https://www.hittamaklare.se/maklare/11986",
+      "example_address": "Dalagatan 102"
+    },
+    "13818": {
+      "url": "https://www.hittamaklare.se/maklare/13818",
+      "example_address": "Rörstrandsgatan 19"
+    }
+  },
+  "agencies": {
+    "32": {
+      "url": "https://www.hittamaklare.se/maklarbyra/32",
+      "example_address": "Observatoriegatan 7"
+    },
+    "16": {
+      "url": "https://www.hittamaklare.se/maklarbyra/16",
+      "example_address": "Gästrikegatan 22"
+    },
+    "947": {
+      "url": "https://www.hittamaklare.se/maklarbyra/947",
+      "example_address": "Tulegatan 32A"
+    },
+    "12": {
+      "url": "https://www.hittamaklare.se/maklarbyra/12",
+      "example_address": "Atlasgatan 9"
+    },
+    "930": {
+      "url": "https://www.hittamaklare.se/maklarbyra/930",
+      "example_address": "Tulegatan 21"
+    },
+    "1050": {
+      "url": "https://www.hittamaklare.se/maklarbyra/1050",
+      "example_address": "Sankt Eriksgatan 85A"
+    },
+    "34": {
+      "url": "https://www.hittamaklare.se/maklarbyra/34",
+      "example_address": "Karlbergsvägen 47B"
+    },
+    "952": {
+      "url": "https://www.hittamaklare.se/maklarbyra/952",
+      "example_address": "Dalagatan 102"
+    },
+    "1131": {
+      "url": "https://www.hittamaklare.se/maklarbyra/1131",
+      "example_address": "Rörstrandsgatan 19"
+    }
+  }
+}
