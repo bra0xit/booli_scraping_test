@@ -17,7 +17,8 @@ class FastighetsbyranScraper(BaseRealtorScraper):
     
     REALTOR_NAME = "Fastighetsbyrån"
     BASE_URL = "https://www.fastighetsbyran.com"
-    STOCKHOLM_SEARCH_URL = "https://www.fastighetsbyran.com/sv/sverige/till-salu?s=stockholm"
+    # Filter: Stockholm, apartments only (Lägenhet)
+    STOCKHOLM_SEARCH_URL = "https://www.fastighetsbyran.com/sv/sverige/till-salu?s=stockholm&propertyTypes=L%C3%A4genhet"
     
     def scrape_listings(self, max_results=50, download_images=True):
         """
@@ -85,12 +86,24 @@ class FastighetsbyranScraper(BaseRealtorScraper):
             urls_to_scrape = list(unique_urls.items())[:max_results]
             
             # Scrape each listing
+            scraped_count = 0
             for i, (obj_id, url) in enumerate(urls_to_scrape):
-                print(f"   [{i+1}/{len(urls_to_scrape)}] Scraping {obj_id}...")
+                if scraped_count >= max_results:
+                    break
+                    
+                print(f"   [{scraped_count+1}/{max_results}] Scraping {obj_id}...")
                 
                 listing_data = self._scrape_listing_details(driver, url, obj_id)
                 
                 if listing_data:
+                    # Filter: only inner Stockholm apartments
+                    if not self._is_inner_stockholm(listing_data.get('address'), listing_data.get('area')):
+                        print(f"      Skipping: not inner Stockholm")
+                        continue
+                    if not self._is_apartment(listing_data.get('property_type'), listing_data.get('address', '')):
+                        print(f"      Skipping: not apartment")
+                        continue
+                    
                     # Download images if requested
                     if download_images and listing_data.get('image_urls'):
                         print(f"      Downloading {len(listing_data['image_urls'])} images...")
@@ -101,6 +114,7 @@ class FastighetsbyranScraper(BaseRealtorScraper):
                         listing_data['local_image_paths'] = local_paths
                     
                     listings.append(listing_data)
+                    scraped_count += 1
                 
                 time.sleep(1.5)  # Be polite
             

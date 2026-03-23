@@ -17,7 +17,8 @@ class SvenskfastScraper(BaseRealtorScraper):
     
     REALTOR_NAME = "Svensk Fastighetsförmedling"
     BASE_URL = "https://www.svenskfast.se"
-    STOCKHOLM_SEARCH_URL = "https://www.svenskfast.se/bostad/?location=stockholm"
+    # Filter: Stockholm inner city, apartments
+    STOCKHOLM_SEARCH_URL = "https://www.svenskfast.se/bostad/?location=stockholm&propertyType=apartment"
     
     def scrape_listings(self, max_results=50, download_images=True):
         """
@@ -117,6 +118,12 @@ class SvenskfastScraper(BaseRealtorScraper):
                     
                     # Rooms
                     listing['rooms'] = data.get('numberOfRooms')
+                    
+                    # Filter: only inner Stockholm apartments
+                    if not self._is_inner_stockholm(listing.get('address'), listing.get('area')):
+                        continue
+                    if not self._is_apartment(listing.get('property_type'), listing.get('address', '')):
+                        continue
                     
                     # Download images if requested
                     if download_images and listing.get('image_urls'):

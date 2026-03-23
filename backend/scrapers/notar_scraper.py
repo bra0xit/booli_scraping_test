@@ -15,7 +15,8 @@ class NotarScraper(BaseRealtorScraper):
     
     REALTOR_NAME = "Notar"
     BASE_URL = "https://www.notar.se"
-    STOCKHOLM_SEARCH_URL = "https://www.notar.se/kopa-bostad?city=stockholm"
+    # Stockholm apartments only
+    STOCKHOLM_SEARCH_URL = "https://www.notar.se/kopa-bostad?city=stockholm&propertyType=apartment"
     
     def scrape_listings(self, max_results=50, download_images=True):
         """Scrape Stockholm listings from Notar"""
@@ -59,12 +60,24 @@ class NotarScraper(BaseRealtorScraper):
             
             urls_to_scrape = list(unique_urls.items())[:max_results]
             
+            scraped_count = 0
             for i, (listing_id, url) in enumerate(urls_to_scrape):
-                print(f"   [{i+1}/{len(urls_to_scrape)}] Scraping {listing_id}...")
+                if scraped_count >= max_results:
+                    break
+                    
+                print(f"   [{scraped_count+1}/{max_results}] Scraping {listing_id}...")
                 
                 listing_data = self._scrape_listing_details(driver, url, listing_id)
                 
                 if listing_data:
+                    # Filter: only inner Stockholm apartments
+                    if not self._is_inner_stockholm(listing_data.get('address'), listing_data.get('area')):
+                        print(f"      Skipping: not inner Stockholm")
+                        continue
+                    if not self._is_apartment(listing_data.get('property_type'), listing_data.get('address', '')):
+                        print(f"      Skipping: not apartment")
+                        continue
+                    
                     if download_images and listing_data.get('image_urls'):
                         print(f"      Downloading {len(listing_data['image_urls'])} images...")
                         local_paths = self._download_images(
@@ -74,6 +87,7 @@ class NotarScraper(BaseRealtorScraper):
                         listing_data['local_image_paths'] = local_paths
                     
                     listings.append(listing_data)
+                    scraped_count += 1
                 
                 time.sleep(1.5)
             

@@ -33,6 +33,18 @@ class BaseRealtorScraper(ABC):
     BASE_URL = ""
     STOCKHOLM_SEARCH_URL = ""
     
+    # Inner Stockholm areas to include
+    STOCKHOLM_INNER_AREAS = [
+        'vasastan', 'östermalm', 'södermalm', 'söder', 'kungsholmen',
+        'norrmalm', 'gamla stan', 'djurgården', 'gärdet', 'ladugårdsgärdet',
+        'city', 'odenplan', 'st eriksplan', 'fridhemsplan', 'mariatorget',
+        'medborgarplatsen', 'skanstull', 'hornstull', 'zinkensdamm',
+        'karlaplan', 'stureplan', 'humlegården', 'birkastan', 'rörstrand',
+        'atlasområdet', 'hagastaden', 'lilla essingen', 'stora essingen',
+        'reimersholme', 'långholmen', 'riddarholmen', 'skeppsholmen',
+        'stadshagen', 'kristineberg', 'fredhäll', 'tantolunden',
+    ]
+    
     def __init__(self, db=None):
         self.image_manager = ImageManager()
         self.db = db
@@ -125,6 +137,74 @@ class BaseRealtorScraper(ABC):
         if match:
             return float(match.group(1).replace(',', '.'))
         return None
+    
+    def _is_inner_stockholm(self, address: str, area: str = None) -> bool:
+        """Check if listing is in inner Stockholm"""
+        text = f"{address or ''} {area or ''}".lower()
+        
+        # Exclude if mentions non-Stockholm cities
+        other_cities = ['göteborg', 'malmö', 'uppsala', 'västerås',
+                        'örebro', 'linköping', 'helsingborg', 'norrköping',
+                        'jönköping', 'lund', 'umeå', 'gävle', 'borås',
+                        'eskilstuna', 'södertälje', 'karlstad', 'täby',
+                        'halmstad', 'växjö', 'sundsvall', 'alingsås',
+                        'trollhättan', 'östersund', 'borlänge', 'falun',
+                        'skellefteå', 'kalmar', 'kristianstad', 'karlskrona',
+                        'uddevalla', 'varberg', 'skövde', 'nyköping',
+                        'motala', 'kiruna', 'luleå', 'visby']
+        
+        for city in other_cities:
+            if city in text:
+                return False
+        
+        # Exclude outer Stockholm suburbs
+        outer_suburbs = ['sollentuna', 'nacka', 'sundbyberg', 'solna', 
+                         'bromma', 'spånga', 'vällingby', 'hässelby',
+                         'farsta', 'skärholmen', 'älvsjö', 'enskede',
+                         'bandhagen', 'hägersten', 'liljeholmen',
+                         'årsta', 'johanneshov', 'hammarbyhöjden',
+                         'huddinge', 'botkyrka', 'haninge', 'tyresö',
+                         'vallentuna', 'österåker', 'värmdö', 'lidingö',
+                         'ekerö', 'upplands väsby', 'sigtuna', 'norrtälje',
+                         'nynäshamn', 'salem', 'danderyd', 'vaxholm',
+                         'märsta', 'tumba', 'jakobsberg', 'kista']
+        
+        for suburb in outer_suburbs:
+            if suburb in text:
+                return False
+        
+        # Check for inner Stockholm areas - definitely accept
+        for inner_area in self.STOCKHOLM_INNER_AREAS:
+            if inner_area in text:
+                return True
+        
+        # Accept if mentions Stockholm (without outer suburb)
+        if 'stockholm' in text:
+            return True
+        
+        # If just a street address with no city, might be Stockholm - accept
+        # (many listings just have "Storgatan 5" without area)
+        return True
+    
+    def _is_apartment(self, property_type: str, text: str = '') -> bool:
+        """Check if listing is an apartment (not house/villa)"""
+        combined = f"{property_type or ''} {text}".lower()
+        
+        # Exclude houses
+        house_types = ['villa', 'radhus', 'kedjehus', 'parhus', 'fritidshus', 
+                       'gård', 'tomt', 'fritidsboende', 'hus']
+        for h in house_types:
+            if h in combined:
+                return False
+        
+        # Include apartments
+        apt_types = ['lägenhet', 'bostadsrätt', 'apartment', 'lgh', 'rum']
+        for a in apt_types:
+            if a in combined:
+                return True
+        
+        # Default to True if no clear indicator (assume apartment in city)
+        return True
     
     @abstractmethod
     def scrape_listings(self, max_results=50, download_images=True):
